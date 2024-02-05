@@ -14,8 +14,8 @@ const config: Config = {
         geist: ["var(--font-geist-sans)", ...fontFamily.sans],
       },
     },
-    plugins: [require("@tailwindcss/typography")],
   },
+  plugins: [require("@tailwindcss/typography")],
 };
 
 export default config;

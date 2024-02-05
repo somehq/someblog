@@ -20,7 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("font-geist antialiased", geist.variable)}>
-        {children}
+        <main className="max-w-3xl px-8 py-6 mx-auto">
+          <p className="text-2xl font-semibold">someblog</p>
+          {children}
+        </main>
       </body>
     </html>
   );
