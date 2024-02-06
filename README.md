@@ -32,7 +32,7 @@ Built-in feature from Next.js:
 
 ### Requirements
 
-- Node.js and pnpm (optional)
+- Node.js and pnpm (recommended)
 
 ### Getting started
 
@@ -57,6 +57,6 @@ Open http://localhost:3000 with your browser to see your project.
 You can see the results locally in production mode with:
 
 ```
-$ npm run build
-$ npm run start
+$ pnpm run build
+$ pnpm run start
 ```
