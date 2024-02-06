@@ -13,11 +13,16 @@ export default async function Page() {
         {!!posts &&
           posts.map((post) => (
             <div key={post.slug} className="mb-4">
-              <Link className="text-xl font-medium" href={`/blog/${post.slug}`}>
+              <Link
+                className="text-xl font-medium"
+                href={`/posts/${post.slug}`}
+              >
                 {post.title}
+                <p className="text-xs text-zinc-400 mt-2">{post.excerpt}</p>
+                <p className="text-xs text-zinc-400 mt-2">
+                  Written by {post.author.name}
+                </p>
               </Link>
-              <p className="text-xs text-zinc-400 mt-2">{post.excerpt}</p>
-              <p className="text-xs text-zinc-400 mt-2">- {post.author.name}</p>
             </div>
           ))}
       </div>

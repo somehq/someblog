@@ -1,0 +1,60 @@
+---
+title: Java if conditions
+excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.
+author: 
+  name: Sithija Nelusha
+---
+
+In Java, the `if` statement is a conditional control flow statement used to execute a block of code only `if` a specified condition is `true`. If the condition is `false`, the code block will be skipped. Additionally, you can extend the if statement with `else if` and `else` statements to provide alternative code paths based on different conditions.
+
+```java
+if (condition) {
+    // Code block to execute if the condition is true
+} else if (anotherCondition) {
+    // Code block to execute if the 'else if' condition is true
+} else {
+    // Code block to execute if none of the above conditions are true
+}
+```
+
+```java
+public class SomeExample {
+    public static void main(String[] args) {
+        int number = 10;
+
+        // Check if number is greater than 0
+        if (number > 0) {
+            System.out.println("Number is positive");
+        }
+
+        // Check if number is even
+        if (number % 2 == 0) {
+            System.out.println("Number is even");
+        } else {
+            System.out.println("Number is odd");
+        }
+
+        // Check if number is divisible by 3 and 5
+        if (number % 3 == 0 && number % 5 == 0) {
+            System.out.println("Number is divisible by 3 and 5");
+        } else if (number % 3 == 0) {
+            System.out.println("Number is divisible by 3");
+        } else if (number % 5 == 0) {
+            System.out.println("Number is divisible by 5");
+        } else {
+            System.out.println("Number is neither divisible by 3 nor 5");
+        }
+    }
+}
+```
+
+In this example:
+
+We first check if the number is positive.
+Then, we check if the number is even or odd using an if-else statement.
+Finally, we check if the number is divisible by 3 and 5, only divisible by 3, only divisible by 5, or neither, using an if-else if-else ladder.
+Notes
+The condition inside the if statement must evaluate to a boolean value (true or false).
+You can have multiple else if blocks to check for additional conditions.
+The else block is optional and is executed if none of the preceding conditions are true.
+Feel free to adjust the example code or add more explanations as needed!

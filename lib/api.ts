@@ -9,7 +9,6 @@ type Post = {
   slug: string;
   author: {
     name: string;
-    image: string;
   };
   content: string;
 };
@@ -40,8 +39,9 @@ export function getPosts(): Post[] {
   return posts;
 }
 
-export function getPostBySlug(slug: string): Post {
+export function getPostBySlug(slug: string): Post | null {
   const path = `${root}/${slug}.mdx`;
+  if (!fs.existsSync(path)) return null;
   const raw = fs.readFileSync(path, "utf-8");
   const { data, content } = matter(raw);
   return {

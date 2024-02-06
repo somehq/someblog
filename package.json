@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.1",
     "clsx": "^2.1.0",
     "geist": "^1.2.2",
     "gray-matter": "^4.0.3",

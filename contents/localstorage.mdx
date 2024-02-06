@@ -1,0 +1,30 @@
+---
+title: Stop Using localStorage!
+excerpt: localStorage was not designed for modern applications and does not support the structured clone algorithm. The title is not clickbait, the message is abrupt “Stop Using localStorage!” there is no ambiguity here and we are not holding hands and singing kumbay to soften the blow.
+author: 
+  name: Sithija Nelusha
+---
+
+![](https://miro.medium.com/v2/resize:fit:1100/format:webp/0*B9czCu8g4ihd4Ijq.png)
+
+localStorage was not designed for modern applications and does not support the structured clone algorithm. The title is not clickbait, the message is abrupt “Stop Using localStorage!” there is no ambiguity here and we are not holding hands and singing kumbay to soften the blow.
+
+Today I am going to tell you about some concepts of NextJS that most of the developers don’t know, you can use them to optimize your App and improve the Developer Experience.
+
+So let’s begin :wink:
+
+### Problems with localStorage?
+
+![](https://miro.medium.com/v2/resize:fit:1100/format:webp/0*RCjT1o9LQJur6-ol.jpg)
+
+***localStorage*** came about around 2009 as a 5MB string based storage. Let’s cut to the chase with some bullet points since our attention spans are in disarray these days:
+
+- **An Object of Strings**: You can only store strings. If you want to store anything else you have to serialize it to a string and deserialize to retrieve. This little quirk has been responsible for all sorts of broken websites E.g. When you store “true” or “false” there is also a potential `null`, `undefined` or “” to look out for depending on your LS setup.
+
+- **Historically Slow**: localStorage is somewhat slow at storing and retrieving data, which makes it undesirable for applications that require frequent transactions. Forget your latest MacBook, benchmarks on low powered devices can reveal the cost more realistically.
+
+- **Size Limitation**: localStorage has a 5MB cap which is subject to eviction. This is a very small amount for modern applications. It’s difficult to store encoded media with such a small amount. This is not a suitable size for modern applications. And it’s not set in stone, just like all persistent storage on the web localStorage can and will be evicted by the browser at some point. **You are expected to manage that part of the data life-cycle, despite there being no reminder to.**
+
+- **No Web Worker Access**: I hope you’re understanding that localStorage is not an API for the future or to harness concurrency, which strives on low powered devices.
+
+- **No Atomicity or Isolation**: localStorage does not guarantee atomicity across multiple operations. There is no locking mechanism to ensure what gets written or to prevent information being written over.
