@@ -1,5 +1,7 @@
 🚀 Statically generated blog using Next.js and Markdown!
 
+Clone this project and use it to create your own [Next.js](https://nextjs.org) blog. You can check [someblog demo](https://someblog-demo.vercel.app).
+
 ### Features
 
 Blog feature:
