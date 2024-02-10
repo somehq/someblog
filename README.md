@@ -1,3 +1,5 @@
+![someblog](https://raw.githubusercontent.com/somehq/somestatic/main/someblog/banner.png)
+
 🚀 Statically generated blog using Next.js and Markdown!
 
 Clone this project and use it to create your own [Next.js](https://nextjs.org) blog. You can check [someblog demo](https://someblog-demo.vercel.app).
@@ -32,33 +34,45 @@ Built-in feature from Next.js:
 - SEO-friendly
 - 🚀 Production-ready
 
-### Requirements
-
-- Node.js and pnpm (recommended)
-
 ### Getting started
+
+We recommend using [pnpm](https://pnpm.io) as the preferred package manager for this project.
+
+To install pnpm globally on your system, you can use npm:
+
+```bash
+npm install -g pnpm
+```
 
 Run the following command on your local environment:
 
-```
+```bash
 git clone https://github.com/somehq/someblog.git ma-blog
 cd ma-blog
+
+npm install
+# or
 pnpm install
 ```
 
 Then, you can run locally in development mode with live reload:
 
-```
-pnpm run dev
+```bash
+npm run dev
+# or
+pnpm dev
 ```
 
-Open http://localhost:3000 with your browser to see your project.
+Open http://localhost:3000 with your browser to see your blog :wink:.
 
 ### Deploy to production
 
 You can see the results locally in production mode with:
 
-```
-$ pnpm run build
-$ pnpm run start
+```bash
+npm run build
+npm run start
+#or 
+pnpm run build
+pnpm run start
 ```
