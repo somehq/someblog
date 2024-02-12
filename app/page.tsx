@@ -14,12 +14,12 @@ export default async function Page() {
           posts.map((post) => (
             <div key={post.slug} className="mb-4">
               <Link
-                className="text-xl font-medium"
+                className="text-2xl font-medium"
                 href={`/posts/${post.slug}`}
               >
                 {post.title}
-                <p className="text-xs text-zinc-400 mt-2">{post.excerpt}</p>
-                <p className="text-xs text-zinc-400 mt-2">
+                <p className="text-sm text-zinc-400 mt-2">{post.excerpt}</p>
+                <p className="text-sm text-zinc-400 mt-2">
                   Written by {post.author.name}
                 </p>
               </Link>

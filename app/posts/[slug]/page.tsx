@@ -24,16 +24,16 @@ export default async function Page({ params }: PageProps) {
   return (
     <div className="flex flex-col mt-16">
       <Link href="/">
-        <span className="inline-flex items-center text-xs text-zinc-400">
+        <span className="inline-flex items-center text-sm text-zinc-400">
           <ArrowLeftIcon className="w-4 h-4 mr-2" />
           Back to posts
         </span>
       </Link>
       <h1 className="text-4xl font-semibold mt-6">{post.title}</h1>
-      <p className="text-xs text-zinc-400 mt-2">
+      <p className="text-sm text-zinc-400 mt-2">
         Written by {post.author.name}
       </p>
-      <article className="max-w-none prose prose-sm mt-10 mx-auto">
+      <article className="max-w-none prose mt-10 mx-auto">
         <MDXContent source={post.content} />
       </article>
     </div>
